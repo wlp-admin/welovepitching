@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Love Pitching - Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Climate+Crisis:wght@400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'inter': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'sans': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'climate': ['Climate Crisis', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-black': '#000000',
+                        'primary-pink': '#FF6CA8', 
+                        'primary-red': '#FF0000',
+                        'primary-white': '#FFFFFF',
+                    },
+                    fontWeight: {
+                        'semibold': '600',
+                        'bold': '700',
+                        'extrabold': '800',
+                        'black': '900',
+                    },
+                    spacing: {
+                        '565': '32.697vw',
+                        '1133': '65.567vw',
+                        '1708': '98.843vw',
+                        '1717': '99.363vw',
+                    },
+                    borderRadius: {
+                        '35': '2.025vw',
+                    },
+                    fontSize: {
+                        '30': '1.736vw',
+                        '32': '1.852vw',
+                        '34': '1.968vw',
+                        '35': '2.025vw',
+                        '53': '3.067vw',
+                        '55': '3.183vw',
+                        '73': '4.225vw',
+                        '93': '5.382vw',
+                    },
+                    lineHeight: {
+                        '35': '2.025vw',
+                        '38': '2.199vw',
+                        '39': '2.257vw',
+                        '51': '2.951vw',
+                        '83': '4.803vw',
+                    },
+                    letterSpacing: {
+                        'tight-055': '-0.032vw',
+                        'tight-048': '-0.028vw',
+                        'tight-07': '-0.041vw',
+                        'tight-105': '-0.061vw',
+                    },
+                    keyframes: {
+                        getspin: { 
+                            '0%': { transform: 'rotate(0deg)' }, 
+                            '100%': { transform: 'rotate(360deg)' } 
+                        }
+                    },
+                    animation: {
+                        getspin: 'getspin 3s linear infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --color-primary-black: #000000;
+            --color-primary-pink: #FF6CA8;
+            --color-primary-red: #FF0000;
+            --color-primary-white: #FFFFFF;
+        }
+        
+        /* Climate Crisis font variation settings */
+        .climate-1979 {
+            font-variation-settings: 'YEAR' 1979;
+        }
+        
+        /* Animazione scroll-based per GET-ITEM */
+        .get-item-scroll {
+            will-change: transform;
+            z-index: -1;
+        }
+        
+        /* Assicura che il contenuto testuale vada sopra alle scritte GET */
+        .become3-content {
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        
+        
+        
+        
+        /* Accessibilità: disattiva animazioni per utenti con prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            .get-item-scroll { 
+                transform: none !important; 
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-poppins pb-[7.118vw]">
+    <!-- 
+    Figma → Tailwind mapping + CORREZIONI:
+    
+    FIGMA_WIDTH_PX = 1728px (frame width for vw calculations)
+    Formula vw: (valore_px / 1728) * 100vw
+    
+    CORREZIONI APPLICATE:
+    - Wrapper globale mx-[0.579vw] (equivalente a 10px) RIPRISTINATO
+    - HERO: SVG WELOVEPITCHING-SVG inline completo
+    - Bottoni BUTTON*: convertiti in <a> con stili esatti, NO w-full ✓
+    - BANNER-RED: semplificato, frase unica, stili corretti da Figma
+    -->
+    
+    <!-- SITE WRAPPER GLOBALE -->
+    <div id="site-wrap" class="mx-[0.579vw]">
+        
+        <!-- HERO SECTION -->
+        <section class="relative w-full pb-[2vw]">
+            <div class="flex justify-end items-center gap-[0.579vw] w-full">
+                <div class="w-[65.567vw] flex flex-col gap-[0.579vw]">
+                    <div class="flex flex-col gap-[5.903vw]">
+                        <!-- Header Info -->
+                        <div class="flex gap-[0.637vw] items-center font-extrabold text-[1.852vw] text-black leading-normal">
+                            <div class="w-[32.813vw]">
+                                <p>@welovepitching</p>
+                            </div>
+                            <div class="text-nowrap">
+                                <p>hey@welovepitching.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Content -->
+                        <div class="flex flex-col gap-[1.736vw]">
+                            <div class="flex flex-col gap-[7.581vw]">
+                                <!-- WELOVEPITCHING-SVG (usando immagine da Figma) -->
+                                <div class="w-[65.567vw] h-[5.961vw] relative" data-name="WELOVEPITCHING-SVG">
+                                    <img src="./assets/logo-welovepitching.svg" 
+                                         alt="We Love Pitching" 
+                                         class="w-full h-full object-contain" />
+                                </div>
+                                
+                                <!-- BUTTON convertito in <a> -->
+                                <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                                    <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">Weird to say out loud, right? </span>
+                                </a>
+                            </div>
+                            
+                            <!-- Description Text -->
+                            <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[57.523vw]">
+                                <p class="mb-0">We get it… </p>
+                                <p class="mb-0 whitespace-pre-wrap">The word lost its shine. But we're not here to trash it… (more than we need to)  </p>
+                                <p class="mb-0">&nbsp;</p>
+                                <p>We're here because we love it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PITCHING SECTION -->
+        <section class="relative w-full py-[3vw]">
+            <div class="flex items-center justify-between w-full">
+                <!-- Image -->
+                <div class="w-[66.088vw] h-[29.630vw] rounded-[2.025vw] relative">
+                    <img src="./assets/1.jpg" 
+                         alt="" 
+                         class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
+                </div>
+                
+                <!-- Text Content -->
+                <div class="w-[31.887vw] flex flex-col gap-[2.257vw] py-[1.157vw]">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw]">
+                        <p>PITCHING KEEPS US SHARP, BOLD, INVENTIVE </p>
+                    </div>
+                    <div class="font-bold text-[2.025vw] text-black leading-[2.025vw]">
+                        <p class="mb-0 whitespace-pre-wrap">It's adrenaline, challenge, and craft.   </p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p class="mb-0 whitespace-pre-wrap">It pushes us to rethink everything, break the mold, and make something bold.   </p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p class="underline decoration-solid">When it works, it's beautiful.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- QUOTE SECTION -->
+        <section class="relative w-full py-[3vw]">
+            <div class="flex justify-end items-center gap-[0.579vw] w-full">
+                <div class="w-[65.567vw]">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase">
+                        <p>These days, pitching feels like an act of faith—it struggles not because of creativity, but because the structure prevents real collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BUT FOR SECTION -->
+        <section class="relative w-full py-[1.5vw]">
+            <div class="flex items-center justify-between w-full">
+                <!-- Image -->
+                <div class="w-[66.088vw] h-[28.646vw] rounded-[2.025vw] relative">
+                    <img src="./assets/2.jpg" 
+                         alt="" 
+                         class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
+                </div>
+                
+                <!-- Text Content -->
+                <div class="w-[31.887vw] flex flex-col gap-[2.257vw] py-[1.157vw]">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase min-w-full" style="width: min-content">
+                        <p class="mb-0">BUT FOR THAT </p>
+                        <p class="mb-0 whitespace-pre-wrap">TO HAPPEN,  </p>
+                        <p>The playing field needs some Rules.</p>
+                    </div>
+                    
+                    <div class="flex gap-[0.579vw] items-start">
+                        <!-- Arrows -->
+                        <div class="relative w-[2.618vw] h-[12.269vw]">
+                            <div class="absolute top-[10.127vw] w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                            <div class="absolute top-[8.102vw] w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                            <div class="absolute top-[6.076vw] w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                            <div class="absolute top-[4.051vw] w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                            <div class="absolute top-[2.025vw] w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                            <div class="absolute top-0 w-[2.618vw] h-[2.141vw]">
+                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                            </div>
+                        </div>
+                        
+                        <!-- Text List -->
+                        <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[28.762vw]">
+                            <p class="mb-0">Responsibility. </p>
+                            <p class="mb-0">Accountability. </p>
+                            <p class="mb-0">Culture. </p>
+                            <p class="mb-0">Equity. </p>
+                            <p class="mb-0">Fair play. </p>
+                            <p class="whitespace-pre-wrap">Integrity.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BANNER SECTION -->
+        <section class="relative w-full">
+            <div class="flex flex-col gap-[0.579vw] w-full">
+                <!-- BANNER-RED semplificato - frase unica -->
+                <div class="bg-primary-red rounded-[2.025vw] px-[2vw] py-[3vw] flex items-center justify-center" data-name="BANNER-RED">
+                    <div class="font-climate text-[5.382vw] text-white leading-[4.803vw] climate-1979">
+                        If the system is broken, complaining will not fix it.
+                    </div>
+                </div>
+                
+                <!-- Action Will Section -->
+                <div class="relative h-[12.211vw] w-full">
+                    <div class="absolute left-0 top-0 w-[98.727vw] h-[12.211vw]">
+                        <img src="./assets/banner.svg" alt="" class="w-full h-full" />
+                    </div>
+                    <div class="absolute left-[28.588vw] top-[3.704vw] font-climate text-[4.225vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                        <p class="whitespace-pre">action will</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- GET INVOLVED SECTION (1COLUMN-WECAN) -->
+        <section class="relative w-full mt-[8vw]" data-name="1COLUMN-WECAN">
+            <div class="flex justify-end items-center gap-[0.579vw] w-full">
+                <div class="w-[65.567vw] flex flex-col gap-[1.736vw]">
+                    <!-- Heading -->
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase w-[65.451vw]">
+                        <p>We can break the mold and rebuild it together.</p>
+                    </div>
+                    
+                    <!-- Body Text -->
+                    <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[65.451vw]">
+                        <p class="mb-0 whitespace-pre-wrap">The pitching process can be a space of trust and collaboration where everyone involved has the conditions to thrive.  </p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p class="mb-0">We educate. We create culture. We build value. </p>
+                        <p class="mb-0">Because when the work is strong and the client is satisfied, </p>
+                        <p>we all win. </p>
+                    </div>
+                    
+                    <!-- BUTTON -->
+                    <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                        <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">What's the ultimate goal?</span>
+                    </a>
+                    
+                    <!-- WHATS Box -->
+                    <div class="bg-white border-[0.289vw] border-black rounded-[2.025vw] w-full flex items-center justify-center px-[1.736vw] pr-[0.579vw] py-[2.315vw]">
+                        <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] tracking-tight-07 w-[63.021vw]">
+                            <p>
+                                <span>No, no, isn't to eliminate pitching, but to </span>
+                                <span class="underline decoration-solid">change how</span>
+                                <span> it's done. Making the process </span>
+                                <span class="underline decoration-solid">fairer</span>
+                                <span>, </span>
+                                <span class="underline decoration-solid">clearer</span>
+                                <span>, and more </span>
+                                <span class="underline decoration-solid">respectful</span>
+                                <span> so the best ideas can rise. </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GET INVOLVED rotated text - posizione esatta da Figma -->
+            <div class="absolute left-0 top-[-0.025vw] flex items-center justify-center">
+                    <div class="get-item-scroll" data-get-item="0">
+                    <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase climate-1979">
+                        <p class="whitespace-pre">GET INVOLVED</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FULL IMAGE SECTION -->
+        <section class="relative w-full py-[3vw]">
+            <div class="w-full h-[29.630vw] rounded-[2.025vw] relative">
+                <img src="./assets/3.jpg" 
+                     alt="" 
+                     class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
+            </div>
+        </section>
+        
+        <!-- INTERNATIONAL INITIATIVE SECTION -->
+        <section class="relative w-full my-[3vw]">
+            <div class="flex justify-end items-center gap-[0.579vw] w-full">
+                <div class="w-[65.567vw] flex flex-col gap-[2.315vw]">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase w-[65.451vw]">
+                        <p>is an international initiative to protect creative work at every level.</p>
+                    </div>
+                    
+                    <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[65.451vw]">
+                        <p>
+                            <span>The purpose is to foster a culture of professional respect between </span>
+                            <span class="underline decoration-solid">clients</span>,<span class="underline decoration-solid"> agencies</span>
+                            <span>, </span>
+                            <span class="underline decoration-solid">studios</span>
+                            <span>, and </span>
+                            <span class="underline decoration-solid">freelancers</span>
+                            <span> through a system of good practices, open tools, and eventually ethical certification. </span>
+                        </p>
+                    </div>
+                    
+                    <!-- BUTTON convertito in <a> -->
+                    <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                        <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">What do we stand for?</span>
+                    </a>
+                    
+                    <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[65.451vw]">
+                        <p class="mb-0 whitespace-pre-wrap">Just fairness, clarity, sustainable timelines, real compensation.  </p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p class="mb-0">Creative ideas emerge from trust, not urgency. </p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p class="mb-0">Creativity is not a favor.</p>
+                        <p>It is work, yes, it is work no joke.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WELOVEPITCHING Logo -->
+            <div class="absolute left-[7.002vw] top-[0.3vw] w-[25.521vw] h-[2.257vw]">
+                <img src="./assets/logo-wlp.svg" alt="We Love Pitching" class="w-full h-full" />
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- BANNERONE SECTION - FULL BLEED (fuori dal wrapper) -->
+    <section class="relative py-[3vw] bg-white ml-[-0.579vw] mr-[-0.579vw] w-[calc(100vw)]" data-name="BANNERONE">
+        <div class="flex flex-col gap-[4.282vw] h-full items-end px-[0.579vw]">
+            <!-- Banner One -->
+            <div class="bg-primary-red rounded-br-[2.025vw] rounded-tr-[2.025vw] w-full h-[26.678vw] flex items-center justify-between pl-[0.579vw]">
+                <div class="w-[31.887vw] flex flex-col gap-[2.257vw] py-[1.157vw]">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw]">
+                        <p>FELT IN LOVE WITH THIS INITIATIVE?</p>
+                    </div>
+                    <div class="font-bold text-[2.025vw] text-black leading-[2.025vw]">
+                        <p class="mb-0">There are plenty of ways to help grow the community: from simply sharing on social media to getting actively involved locally through meetups, workshops, or talks.</p>
+                        <p class="mb-0">&nbsp;</p>
+                        <p> Let's talk about it! </p>
+                    </div>
+                </div>
+                
+                <div class="w-[65.567vw] h-full rounded-[2.025vw] relative">
+                    <img src="./assets/4.jpg" 
+                         alt="" 
+                         class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BECOME3 SECTION (dentro del wrapper per margini 10px) -->
+    <div id="site-wrap-become3" class="mx-[0.579vw]">
+        <section class="relative py-[3vw] bg-white" data-name="BECOME3-SECTION">
+            <!-- Three Columns BECOME3 - Layout esatto da Figma -->
+            <div class="grid grid-cols-3 gap-[0.579vw] items-start w-full relative" data-name="BECOME3">
+                <!-- Column 1: Subscriber -->
+                <div class="flex flex-col gap-[3.472vw] h-[61.342vw] relative become3-content">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase min-w-full" style="width: min-content">
+                        <p class="mb-0">BeCOME a </p>
+                        <p>Subscriber</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-[0.289vw] w-full">
+                        <div class="flex flex-col gap-[1.736vw] font-bold text-[2.025vw] text-black leading-[2.257vw]">
+                            <div class="w-full">
+                                <p>
+                                    —<span class="tracking-tight-048">Stay connected to the initiative (</span>
+                                    <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                    <span class="tracking-tight-048">)</span>
+                                </p>
+                            </div>
+                            <div class="w-full">
+                                <p>—Endorse its values</p>
+                            </div>
+                            <div class="w-full">
+                                <p>—Access to shared resources: </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-[0.579vw] items-start pl-[1.736vw]">
+                            <div class="font-semibold text-[1.736vw] text-black leading-[2.025vw]">
+                                <p class="mb-0">• Badge for website </p>
+                                <p class="mb-0">• Creative Code of Arms</p>
+                                <p class="mb-0">• Prerequisite Collaboration Guideline (Template)</p>
+                                <p>• Transparent Project Status & Pitching conditions (Template)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GET IT rotated text - posizione esatta da Figma -->
+                    <div class="absolute left-[8.912vw] top-[39vw] flex items-center justify-center">
+                        <div class="get-item-scroll" data-get-item="1">
+                            <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                                <p class="leading-[4.803vw] whitespace-pre">GET IT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Supporter -->
+                <div class="flex flex-col gap-[3.472vw] h-[61.342vw] relative become3-content">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase min-w-full" style="width: min-content">
+                        <p>BeCOME a supporter</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-[0.289vw] w-full">
+                        <div class="flex flex-col gap-[1.736vw] text-[2.025vw] text-black leading-[2.199vw]">
+                            <div class="font-bold w-full">
+                                <p>
+                                    —<span class="tracking-tight-048">Stay connected to the initiative (</span>
+                                    <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                    <span class="tracking-tight-048">)</span>
+                                </p>
+                            </div>
+                            <div class="font-bold w-full">
+                                <p>—Endorse its values</p>
+                            </div>
+                            <div class="font-bold w-full">
+                                <p>—Access to shared resources</p>
+                            </div>
+                            <div class="font-bold w-full">
+                                <p>—Access to promo resources</p>
+                            </div>
+                            <div class="font-bold w-full">
+                                <p>—Spread the manifesto, promote the cause, and contribute to cultural change without serving as official representatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Get involved rotated text - posizione esatta da Figma -->
+                    <div class="absolute top-[43vw] flex items-center justify-center" style="left: calc(50% - 16.030vw)">
+                        <div class="get-item-scroll" data-get-item="2">
+                            <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                                <p class="leading-[4.803vw] whitespace-pre">Get involved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Ambassadors -->
+                <div class="flex flex-col gap-[3.472vw] h-[61.342vw] relative become3-content">
+                    <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase w-full">
+                        <p>BeCOME a Ambassadors / Allies</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-[1.736vw] text-[2.025vw] text-black leading-[2.199vw] w-full">
+                        <div class="font-bold w-full">
+                            <p>
+                                —<span class="tracking-tight-048">Stay connected to the initiative (</span>
+                                <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                <span class="tracking-tight-048">)</span>
+                            </p>
+                        </div>
+                        <div class="font-bold w-full">
+                            <p>—Endorse its values</p>
+                        </div>
+                        <div class="font-bold w-full">
+                            <p>—Access to shared resources</p>
+                        </div>
+                        <div class="font-bold w-full">
+                            <p>—Access to promo resources</p>
+                        </div>
+                        <div class="font-bold w-full">
+                            <p>—Provide visibility, resources, and influence by aligning their organization with WLP values.</p>
+                        </div>
+                        <div class="font-bold w-full">
+                            <p>—External representatives, connected directly to the Core Team, trusted to speak in the name of WLP.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Get involved rotated text - posizione esatta da Figma -->
+                    <div class="absolute left-[50%] top-[53vw] flex items-center justify-center -translate-x-[50%] z-[-1]">
+                        <div class="get-item-scroll" data-get-item="3">
+                            <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                                <p class="leading-[4.803vw] whitespace-pre">Get involved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </div>
+    
+    <!-- BOTTOM SECTION (dentro del wrapper) -->
+    <div id="site-wrap-bottom" class="mx-[0.579vw]">
+        <section class="relative w-full pt-[4vw]">
+            <div class="flex gap-[0.579vw] justify-end w-full" data-name="GRIDCOLUMN">
+                <!-- Left Column -->
+                <div class="basis-0 grow">
+                    <div class="flex flex-col gap-[2.315vw] h-full">
+                        <div class="flex flex-col gap-[0.579vw] w-full">
+                            <!-- Pink Box -->
+                            <div class="bg-primary-pink rounded-[2.025vw] px-[1.736vw] py-[2.894vw] flex flex-col gap-[1.794vw] w-full" data-name="THIS INIT">
+                                <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase tracking-tight-055 w-full">
+                                    <p>
+                                        <span>THIS INITIATIVE IS </span>
+                                        <span class="underline decoration-solid">FOR EVERONE</span>
+                                    </p>
+                                </div>
+                                <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] tracking-tight-105 w-full">
+                                    <p class="mb-0">
+                                        <span>For those who </span>
+                                        <span class="underline decoration-solid">create</span>
+                                        <span>. </span>
+                                    </p>
+                                    <p>
+                                        <span>For those who </span>
+                                        <span class="underline decoration-solid">commission</span>
+                                        <span>. For those who want to build working relationships based on </span>
+                                        <span class="underline decoration-solid">respect</span>
+                                        <span> + </span>
+                                        <span class="underline decoration-solid">quality</span>
+                                        <span> + true </span>
+                                        <span class="underline decoration-solid">value of work</span>.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- White Box with Border -->
+                            <div class="border-[0.289vw] border-black rounded-[2.025vw] px-[1.736vw] py-[2.894vw] flex flex-col gap-[1.794vw] w-full" data-name="THE FAIR">
+                                <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase tracking-tight-055 w-full">
+                                    <p>THE FAIR PITCH TOOLKIT</p>
+                                </div>
+                                <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] tracking-tight-105 w-full">
+                                    <p class="mb-0 whitespace-pre-wrap">Is a practical ecosystem of good practices, open for anyone to share, translate, and customize.  </p>
+                                    <p class="mb-0">&nbsp;</p>
+                                    <p class="whitespace-pre-wrap">Built to be downloaded, adapted, and reused freely.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="w-[65.567vw]">
+                    <div class="border-[0.289vw] border-black rounded-[2.025vw] px-[1.736vw] py-[2.894vw] h-full flex flex-col gap-[4.745vw]" data-name="MORE">
+                        <div class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase tracking-tight-055 min-w-full" style="width: min-content">
+                            <p>MORE IMPORTANT: IT'S AN OPEN TOOL. </p>
+                        </div>
+                        
+                        <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] tracking-tight-07 w-[61.053vw]">
+                            <p class="mb-0 whitespace-pre-wrap">This manifesto is ours.   </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0">A container of values and resources for the entire creative ecosystem: studios, freelancers, agencies, and brands. </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0 whitespace-pre-wrap">It is built together, not top down.  </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0">Written by real people in the industry, but open to anyone willing to make pitching fairer and healthier. </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0 whitespace-pre-wrap">As the community grows, so do the tools.  </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0">Anyone can become an ambassador for a new way of </p>
+                            <p class="mb-0">working. </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p class="mb-0 whitespace-pre-wrap">It is a shared system to restore balance.  </p>
+                            <p class="mb-0">&nbsp;</p>
+                            <p >
+                                All tools are shared under the<span class="underline decoration-solid"> Creative Commons BY-NC-SA license, free to use, remix, and share with attribution.  </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- PITCHSMART SECTION -->
+    <section id="PITCHSMART" class="relative w-[98.843vw] h-[15.684vw] my-[2vw]" data-name="PITCHSMART">
+        <div class="relative w-[98.727vw] h-[15.684vw] mx-auto">
+            <div class="absolute left-0 top-0 w-[98.727vw] h-[15.684vw]">
+                <img src="./assets/banner.svg" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 font-climate text-[5.324vw] text-primary-red leading-[4.803vw] font-normal text-center text-nowrap" style="font-variation-settings: 'YEAR' 1979">
+                <p class="whitespace-pre">Pitch smart,<br>Not hard.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FIXED FOOTER -->
+    <div id="FIXED-FOOTER" class="fixed left-0 right-0 bottom-0 z-50 pb-[calc(env(safe-area-inset-bottom))] bg-white">
+        <div class="flex items-start w-full h-[7.118vw]">
+            <!-- Button 1: JOIN THE INITIATIVE -->
+            <div class="basis-0 grow min-h-px min-w-px relative self-stretch shrink-0">
+                <a href="#" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw] border-[0.289vw] border-black border-solid">
+                    <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                        <p class="leading-[4.803vw] whitespace-pre">JOIN THE INITIATIVE</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Button 2: Updates through newsletter -->
+            <div class="basis-0 bg-black grow min-h-px min-w-px relative self-stretch shrink-0">
+                <a href="#" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw]">
+                    <div class="font-medium text-[2.025vw] text-white leading-[2.025vw] text-nowrap tracking-tight-105">
+                        <p class="leading-[2.025vw] whitespace-pre">Updates through newsletter • Subscribe</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript per animazione scroll-based -->
+    <script>
+        let rotationAngle = 0;
+        let isScrolling = false;
+        let scrollTimeout;
+        
+        function handleScroll() {
+            // Attiva l'animazione istantaneamente
+            isScrolling = true;
+            
+            // Clear timeout precedente
+            clearTimeout(scrollTimeout);
+            
+            // Ferma l'animazione dopo 16ms (1 frame) di inattività
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+            }, 16);
+        }
+        
+        // Animazione continua mentre scrolli
+        function animateRotation() {
+            if (isScrolling) {
+                rotationAngle += 2; // Incrementa di 2 gradi per frame
+                document.querySelectorAll('.get-item-scroll').forEach(item => {
+                    item.style.transform = `rotate(${rotationAngle}deg)`;
+                });
+            }
+            requestAnimationFrame(animateRotation);
+        }
+        
+        // Event listener per scroll
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Event listener per wheel (mouse wheel)
+        window.addEventListener('wheel', handleScroll, { passive: true });
+        
+        // Avvia l'animazione
+        animateRotation();
+        
+        // Debug: verifica che gli elementi esistano al caricamento
+        document.addEventListener('DOMContentLoaded', function() {
+            const getItems = document.querySelectorAll('.get-item-scroll');
+            console.log('Found GET-ITEM elements:', getItems.length);
+        });
+    </script>
+        
+</body>
+</html>
