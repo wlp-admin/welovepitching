@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Climate+Crisis:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/favicon.ico">
     <script>
         tailwind.config = {
             theme: {
@@ -114,18 +116,7 @@
     </style>
 </head>
 <body class="bg-white font-poppins pb-[7.118vw]">
-    <!-- 
-    Figma → Tailwind mapping + CORREZIONI:
     
-    FIGMA_WIDTH_PX = 1728px (frame width for vw calculations)
-    Formula vw: (valore_px / 1728) * 100vw
-    
-    CORREZIONI APPLICATE:
-    - Wrapper globale mx-[0.579vw] (equivalente a 10px) RIPRISTINATO
-    - HERO: SVG WELOVEPITCHING-SVG inline completo
-    - Bottoni BUTTON*: convertiti in <a> con stili esatti, NO w-full ✓
-    - BANNER-RED: semplificato, frase unica, stili corretti da Figma
-    -->
     
     <!-- SITE WRAPPER GLOBALE -->
     <div id="site-wrap" class="mx-[0.579vw]">
@@ -138,7 +129,7 @@
                         <!-- Header Info -->
                         <div class="flex gap-[0.637vw] items-center font-extrabold text-[1.852vw] text-black leading-normal">
                             <div class="w-[32.813vw]">
-                                <p><a href="https://www.instagram.com/welovepitching/" target="_blank">@welovepitching</a></p>
+                                  <a target="_blank" href="https://www.instagram.com/welovepitching/" class="underline decoration-solid tracking-tight-048">@welovepitching</a>
                             </div>
                             <div class="text-nowrap">
                                 <p>hey@welovepitching.com</p>
@@ -150,15 +141,15 @@
                             <div class="flex flex-col gap-[7.581vw]">
                                 <!-- WELOVEPITCHING-SVG (usando immagine da Figma) -->
                                 <div class="w-[65.567vw] h-[5.961vw] relative" data-name="WELOVEPITCHING-SVG">
-                                    <img src="./assets/logo-welovepitching.svg" 
+                                    <img src="/assets/logo-welovepitching.svg" 
                                          alt="We Love Pitching" 
                                          class="w-full h-full object-contain" />
                                 </div>
                                 
                                 <!-- BUTTON convertito in <a> -->
-                                <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                                <div class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
                                     <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">Weird to say out loud, right? </span>
-                                </a>
+                                </div>
                             </div>
                             
                             <!-- Description Text -->
@@ -179,7 +170,7 @@
             <div class="flex items-center justify-between w-full">
                 <!-- Image -->
                 <div class="w-[66.088vw] h-[29.630vw] rounded-[2.025vw] relative">
-                    <img src="./assets/1.jpg" 
+                    <img src="/assets/1.jpg" 
                          alt="" 
                          class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
                 </div>
@@ -216,7 +207,7 @@
             <div class="flex items-center justify-between w-full">
                 <!-- Image -->
                 <div class="w-[66.088vw] h-[28.646vw] rounded-[2.025vw] relative">
-                    <img src="./assets/2.jpg" 
+                    <img src="/assets/2.jpg" 
                          alt="" 
                          class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
                 </div>
@@ -233,22 +224,22 @@
                         <!-- Arrows -->
                         <div class="relative w-[2.618vw] h-[12.269vw]">
                             <div class="absolute top-[10.127vw] w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                             <div class="absolute top-[8.102vw] w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                             <div class="absolute top-[6.076vw] w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                             <div class="absolute top-[4.051vw] w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                             <div class="absolute top-[2.025vw] w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                             <div class="absolute top-0 w-[2.618vw] h-[2.141vw]">
-                                <img src="./assets/icons.svg" alt="" class="w-full h-full" />
+                                <img src="/assets/icons.svg" alt="" class="w-full h-full" />
                             </div>
                         </div>
                         
@@ -279,7 +270,7 @@
                 <!-- Action Will Section -->
                 <div class="relative h-[12.211vw] w-full">
                     <div class="absolute left-0 top-0 w-[98.727vw] h-[12.211vw]">
-                        <img src="./assets/banner.svg" alt="" class="w-full h-full" />
+                        <img src="/assets/banner.svg" alt="" class="w-full h-full" />
                     </div>
                     <div class="absolute left-[28.588vw] top-[3.704vw] font-climate text-[4.225vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
                         <p class="whitespace-pre">action will</p>
@@ -307,9 +298,9 @@
                     </div>
                     
                     <!-- BUTTON -->
-                    <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                    <div class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
                         <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">What's the ultimate goal?</span>
-                    </a>
+                    </div>
                     
                     <!-- WHATS Box -->
                     <div class="bg-white border-[0.289vw] border-black rounded-[2.025vw] w-full flex items-center justify-center px-[1.736vw] pr-[0.579vw] py-[2.315vw]">
@@ -332,18 +323,18 @@
             
             <!-- GET INVOLVED rotated text - posizione esatta da Figma -->
             <div class="absolute left-0 top-[-0.025vw] flex items-center justify-center">
-                    <div class="get-item-scroll" data-get-item="0">
+                    <a href="get-involved.html" class="relative z-10 get-item-scroll" data-get-item="0">
                     <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase climate-1979">
                         <p class="whitespace-pre">GET INVOLVED</p>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         
         <!-- FULL IMAGE SECTION -->
         <section class="relative w-full py-[3vw]">
             <div class="w-full h-[29.630vw] rounded-[2.025vw] relative">
-                <img src="./assets/3.jpg" 
+                <img src="/assets/3.jpg" 
                      alt="" 
                      class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
             </div>
@@ -370,9 +361,9 @@
                     </div>
                     
                     <!-- BUTTON convertito in <a> -->
-                    <a href="#" role="button" class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
+                    <div class="inline-flex items-center justify-center w-auto max-w-max self-auto bg-black rounded-[2.025vw] px-[1.736vw] py-[1.620vw] gap-[0.579vw]" data-name="BUTTON">
                         <span class="text-white font-semibold text-[1.968vw] leading-normal whitespace-pre">What do we stand for?</span>
-                    </a>
+                    </div>
                     
                     <div class="font-bold text-[2.025vw] text-black leading-[2.025vw] w-[65.451vw]">
                         <p class="mb-0 whitespace-pre-wrap">Just fairness, clarity, sustainable timelines, real compensation.  </p>
@@ -387,7 +378,7 @@
             
             <!-- WELOVEPITCHING Logo -->
             <div class="absolute left-[7.002vw] top-[0.3vw] w-[25.521vw] h-[2.257vw]">
-                <img src="./assets/logo-wlp.svg" alt="We Love Pitching" class="w-full h-full" />
+                <img src="/assets/logo-wlp.svg" alt="We Love Pitching" class="w-full h-full" />
             </div>
         </section>
         
@@ -410,7 +401,7 @@
                 </div>
                 
                 <div class="w-[65.567vw] h-full rounded-[2.025vw] relative">
-                    <img src="./assets/4.jpg" 
+                    <img src="/assets/4.jpg" 
                          alt="" 
                          class="absolute inset-0 w-full h-full object-cover rounded-[2.025vw]" />
                 </div>
@@ -435,7 +426,7 @@
                             <div class="w-full">
                                 <p>
                                     —<span class="tracking-tight-048">Stay connected to the initiative (</span>
-                                    <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                    <a target="_blank" href="http://eepurl.com/joyxtM" class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</a>
                                     <span class="tracking-tight-048">)</span>
                                 </p>
                             </div>
@@ -459,11 +450,11 @@
                     
                     <!-- GET IT rotated text - posizione esatta da Figma -->
                     <div class="absolute left-[8.912vw] top-[39vw] flex items-center justify-center">
-                        <div class="get-item-scroll" data-get-item="1">
+                        <a target="_blank" href="https://drive.google.com/drive/folders/1h4QSzrgRNsiE0pouQ2qEic3yNtW0RHRm?usp=drive_link" class="relative z-10 get-item-scroll" data-get-item="1">
                             <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
                                 <p class="leading-[4.803vw] whitespace-pre">GET IT</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -478,7 +469,7 @@
                             <div class="font-bold w-full">
                                 <p>
                                     —<span class="tracking-tight-048">Stay connected to the initiative (</span>
-                                    <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                    <a target="_blank" href="http://eepurl.com/joyxtM" class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</a>
                                     <span class="tracking-tight-048">)</span>
                                 </p>
                             </div>
@@ -499,11 +490,11 @@
                     
                     <!-- Get involved rotated text - posizione esatta da Figma -->
                     <div class="absolute top-[43vw] flex items-center justify-center" style="left: calc(50% - 16.030vw)">
-                        <div class="get-item-scroll" data-get-item="2">
+                        <a href="get-involved.html" class="relative z-10 get-item-scroll" data-get-item="2">
                             <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
                                 <p class="leading-[4.803vw] whitespace-pre">Get involved</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -517,7 +508,7 @@
                         <div class="font-bold w-full">
                             <p>
                                 —<span class="tracking-tight-048">Stay connected to the initiative (</span>
-                                <span class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</span>
+                                <a target="_blank" href="http://eepurl.com/joyxtM" class="underline decoration-solid tracking-tight-048">Subscribe to the newsletter</a>
                                 <span class="tracking-tight-048">)</span>
                             </p>
                         </div>
@@ -539,12 +530,12 @@
                     </div>
                     
                     <!-- Third Get involved rotated text - posizione esatta da Figma -->
-                    <div class="absolute left-[50%] top-[53vw] flex items-center justify-center -translate-x-[50%] z-[-1]">
-                        <div class="get-item-scroll" data-get-item="3">
+                    <div class="absolute left-[50%] top-[53vw] flex items-center justify-center -translate-x-[50%]">
+                        <a href="get-involved.html" class="relative z-10 get-item-scroll" data-get-item="3">
                             <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
                                 <p class="leading-[4.803vw] whitespace-pre">Get involved</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -640,7 +631,7 @@
     <section id="PITCHSMART" class="relative w-[98.843vw] h-[15.684vw] my-[2vw]" data-name="PITCHSMART">
         <div class="relative w-[98.727vw] h-[15.684vw] mx-auto">
             <div class="absolute left-0 top-0 w-[98.727vw] h-[15.684vw]">
-                <img src="./assets/banner.svg" alt="" class="w-full h-full object-cover" />
+                <img src="/assets/banner.svg" alt="" class="w-full h-full object-cover" />
             </div>
             <div class="absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 font-climate text-[5.324vw] text-primary-red leading-[4.803vw] font-normal text-center text-nowrap" style="font-variation-settings: 'YEAR' 1979">
                 <p class="whitespace-pre">Pitch smart,<br>Not hard.</p>
@@ -653,7 +644,7 @@
         <div class="flex items-start w-full h-[7.118vw]">
             <!-- Button 1: JOIN THE INITIATIVE -->
             <div class="basis-0 grow min-h-px min-w-px relative self-stretch shrink-0">
-                <a href="#" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw] border-[0.289vw] border-black border-solid">
+                <a href="get-involved.html" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw] border-[0.289vw] border-black border-solid">
                     <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
                         <p class="leading-[4.803vw] whitespace-pre">JOIN THE INITIATIVE</p>
                     </div>
@@ -662,9 +653,9 @@
             
             <!-- Button 2: Updates through newsletter -->
             <div class="basis-0 bg-black grow min-h-px min-w-px relative self-stretch shrink-0">
-                <a href="#" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw]">
+                <a target="_blank" href="http://eepurl.com/joyxtM" role="button" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw]">
                     <div class="font-medium text-[2.025vw] text-white leading-[2.025vw] text-nowrap tracking-tight-105">
-                        <p class="leading-[2.025vw] whitespace-pre">Updates through newsletter • Subscribe</p>
+                        <p class="leading-[2.025vw] whitespace-pre">Updates through newsletter ☺ Subscribe</p>
                     </div>
                 </a>
             </div>
