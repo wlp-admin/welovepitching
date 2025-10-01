@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLP Partnership Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Climate+Crisis:wght@400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'inter': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'sans': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'climate': ['Climate Crisis', 'system-ui', 'sans-serif'],
+                        'cc': ['"Climate Crisis"', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-black': '#000000',
+                        'primary-pink': '#FF6CA8', 
+                        'primary-red': '#FF0000',
+                        'primary-white': '#FFFFFF',
+                        'primary-green': '#00ff00',
+                    },
+                    fontWeight: {
+                        'semibold': '600',
+                        'bold': '700',
+                        'extrabold': '800',
+                        'black': '900',
+                    },
+                    spacing: {
+                        '565': '32.697vw',
+                        '1133': '65.567vw',
+                        '1708': '98.843vw',
+                        '1717': '99.363vw',
+                    },
+                    borderRadius: {
+                        '35': '2.025vw',
+                    },
+                    fontSize: {
+                        '30': '1.736vw',
+                        '32': '1.852vw',
+                        '34': '1.968vw',
+                        '35': '2.025vw',
+                        '53': '3.067vw',
+                        '55': '3.183vw',
+                        '73': '4.225vw',
+                        '93': '5.382vw',
+                    },
+                    lineHeight: {
+                        '35': '2.025vw',
+                        '38': '2.199vw',
+                        '39': '2.257vw',
+                        '51': '2.951vw',
+                        '83': '4.803vw',
+                    },
+                    letterSpacing: {
+                        'tight-055': '-0.032vw',
+                        'tight-048': '-0.028vw',
+                        'tight-07': '-0.041vw',
+                        'tight-105': '-0.061vw',
+                    },
+                    keyframes: {
+                        getspin: { 
+                            '0%': { transform: 'rotate(0deg)' }, 
+                            '100%': { transform: 'rotate(360deg)' } 
+                        }
+                    },
+                    animation: {
+                        getspin: 'getspin 3s linear infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --color-primary-black: #000000;
+            --color-primary-pink: #FF6CA8;
+            --color-primary-red: #FF0000;
+            --color-primary-white: #FFFFFF;
+        }
+        
+        /* Climate Crisis font variation settings */
+        .climate-1979 {
+            font-variation-settings: 'YEAR' 1979;
+        }
+        
+        /* Animazioni per transizioni */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white font-poppins w-screen min-h-screen">
+    <div class="px-[0.579vw] w-full bg-white">
+        <div id="heroBanner" class="bg-primary-red rounded-[2.025vw] px-[2vw] py-[3vw] flex items-center justify-center">
+            <div class="font-climate text-[5.382vw] text-white leading-[4.803vw] climate-1979">
+                Let's support the initiative and help people pitch smarter, not harder.
+            </div>
+        </div>
+
+        <section class="relative w-full mt-[2vw]">
+            <div class="flex justify-end items-center gap-[0.579vw] w-full">
+                <div class="w-[65.567vw] flex flex-col gap-[0.579vw]">
+            <form id="partnershipForm">
+                        <div style="position:absolute;left:-5000px" aria-hidden="true">
+                            <input type="text" name="hp" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="mb-[1.736vw]">
+                            <h2 class="font-extrabold text-[3.183vw] text-black leading-[2.951vw] uppercase ">
+                                There are plenty of ways to help grow the community
+                            </h2>
+                            <h3 class="text-[1.852vw] text-black mb-[1.157vw] font-bold">
+                                Select the category that best represents you:
+                            </h3>
+                            
+                            <div class="grid gap-[0.868vw] mb-[1.736vw]">
+                                <div class="category-card border-[0.289vw] border-black rounded-[2.025vw] p-[1.157vw] cursor-pointer transition-all duration-300 relative bg-white text-black" onclick="selectCategory('ambassadors')">
+                                    <input type="radio" name="category" value="ambassadors" id="ambassadors" class="absolute opacity-0 cursor-pointer">
+                                    <div class="category-name text-[1.852vw] font-bold mb-[0.463vw]">Ambassadors (Representation and Advocacy)</div>
+                                    <div class="category-description text-[1.157vw] font-bold leading-[1.4]">Act as official spokespeople who represent W❤️P publicly</div>
+                                    <div class="category-details mt-[0.868vw] font-bold text-[1.157vw] hidden">
+                                        <p class="leading-[1.4]"><strong>Role:</strong> Act as official spokespeople who represent W❤️P publicly and help expand reach and legitimacy.</p>
+                                        <p class="leading-[1.4]"><strong>Who:</strong> General ambassadors as global voices and regional or category ambassadors representing creators, agencies, or clients.</p>
+                                        <p class="leading-[1.4]"><strong>Position:</strong> External representatives, connected directly to the Core Team, trusted to speak in the name of W❤️P.</p>
+                                    </div>
+                                </div>
+    
+                                <div class="category-card border-[0.289vw] border-black rounded-[2.025vw] p-[1.157vw] cursor-pointer transition-all duration-300 relative bg-white" onclick="selectCategory('allies')">
+                                    <input type="radio" name="category" value="allies" id="allies" class="absolute opacity-0 cursor-pointer">
+                                    <div class="category-name text-[1.852vw] font-bold mb-[0.463vw]">Allies (Institutional Support)</div>
+                                    <div class="category-description text-[1.157vw] font-bold leading-[1.4]">Provide visibility, resources, and influence by aligning with W❤️P values</div>
+                                    <div class="category-details mt-[0.868vw] font-bold text-[1.157vw] hidden">
+                                        <p class="leading-[1.4]"><strong>Role:</strong> Provide visibility, resources, and influence by aligning their organization with W❤️P values.</p>
+                                        <p class="leading-[1.4]"><strong>Who:</strong> Trade associations, major organizations, and big media such as AICP, ACD, Stash, Shots.</p>
+                                        <p class="leading-[1.4]"><strong>Position:</strong> Institutional partners that support growth, lobbying, or structure but do not speak for W❤️P.</p>
+                                    </div>
+                                </div>
+    
+                                <div class="category-card border-[0.289vw] border-black rounded-[2.025vw] p-[1.157vw] cursor-pointer transition-all duration-300 relative bg-white" onclick="selectCategory('supporters')">
+                                    <input type="radio" name="category" value="supporters" id="supporters" class="absolute opacity-0 cursor-pointer">
+                                    <div class="category-name text-[1.852vw] font-bold mb-[0.463vw]">Supporters (Community Advocates)</div>
+                                    <div class="category-description text-[1.157vw] font-bold leading-[1.4]">Spread the manifesto and contribute to cultural change</div>
+                                    <div class="category-details mt-[0.868vw] font-bold text-[1.157vw] hidden">
+                                        <p class="leading-[1.4]"><strong>Role:</strong> Spread the manifesto, promote the cause, and contribute to cultural change without serving as official representatives.</p>
+                                        <p class="leading-[1.4]"><strong>Who:</strong> Individual creators, agencies, clients, smaller organizations, and minor media.</p>
+                                        <p class="leading-[1.4]"><strong>Position:</strong> A broad community layer that amplifies the message and grows awareness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="formFields" class="form-fields hidden">
+                            <div class="mb-[1.157vw]">
+                                <label for="fullName" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Your full name *</label>
+                                <input type="text" id="fullName" name="fullName" required class="w-full p-[0.694vw] border-[0.289vw] border-black rounded-none text-[1.157vw] bg-white focus-visible:outline-none">
+                            </div>
+
+                            <div class="mb-[1.157vw]">
+                                <label for="email" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full p-[0.694vw] border-[0.289vw] border-black rounded-none text-[1.157vw] bg-white focus-visible:outline-none">
+                            </div>
+    
+                            <div class="mb-[1.157vw]">
+                                <label for="brandName" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Brand/Agency/Studio/Nickname *</label>
+                                <input type="text" id="brandName" name="brandName" required class="w-full p-[0.694vw] border-[0.289vw] border-black rounded-none text-[1.157vw] bg-white focus-visible:outline-none">
+                        </div>
+
+                            <div class="mb-[1.157vw]">
+                                <label for="location" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Location (City, State, Country) *</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Milano, Lombardia, Italia" required class="w-full p-[0.694vw] border-[0.289vw] border-black rounded-none text-[1.157vw] bg-white focus-visible:outline-none">
+                            </div>
+    
+                            <div class="mb-[1.157vw]">
+                                <label for="logo" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Your logo (if you like, but we can do it later)</label>
+                                <div class="file-upload relative inline-block cursor-pointer w-full">
+                                    <input type="file" id="logo" name="logo" accept=".png,.jpg,.jpeg,.svg" class="absolute opacity-0 w-full h-full cursor-pointer">
+                                    <label for="logo" class="file-upload-label block p-[0.694vw] border-[0.289vw] border-dashed border-black rounded-none text-center text-black">
+                                        📎 Click to upload your logo
+                                    </label>
+                        </div>
+                                <div id="logoPreview" class="hidden mt-[0.8vw] flex items-center gap-3">
+                                    <img id="logoThumb" alt="Logo preview" class="w-[4vw] h-[4vw] object-contain border border-black" />
+                                    <button type="button" id="removeLogo" class="underline text-black">Remove</button>
+                                </div>
+                                <p id="logoError" class="hidden mt-[0.4vw] text-red-600 text-[0.95vw]" role="alert" aria-live="polite"></p>
+                            </div>
+
+                            <div class="mb-[1.157vw]">
+                                <label for="involvement" class="block text-black font-bold mb-[0.463vw] text-[1.157vw]">Describe if and how you'd like to be involved *</label>
+                                <textarea id="involvement" name="involvement" placeholder="Describe how you would like to be involved in the W❤️P project..." required class="w-full p-[0.694vw] border-[0.289vw] border-black rounded-none text-[1.157vw] bg-white resize-vertical min-h-[5.787vw] focus-visible:outline-none"></textarea>
+                    </div>
+
+                            <label class="flex items-start gap-[0.579vw] text-black font-bold mb-[0.463vw] text-[1.157vw] cursor-pointer">
+                                <div class="relative flex-shrink-0">
+                                    <input type="checkbox" name="consent" required class="sr-only peer focus-visible:outline-none">
+                                    <div class="mt-[0.2vw] w-[1.157vw] h-[1.157vw] border-[0.289vw] border-black bg-white peer-checked:bg-black transition-colors duration-200 flex items-center justify-center">
+                                        <svg class="w-[0.694vw] h-[0.694vw] text-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>I agree to the <a href="https://www.iubenda.com/privacy-policy/18513628/legal" target="_blank" class="underline">Privacy Policy</a></span>
+                            </label>
+                            <input type="hidden" name="source" value="get-involved">
+
+                            <button type="submit" class="inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw] border-[0.289vw] border-black border-solid my-[1.157vw]">
+                                <div class="font-climate text-[3.067vw] text-primary-red leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                                    <p class="leading-[4.803vw] whitespace-pre">SUBMIT APPLICATION</p>
+                                </div>
+                            </button>
+
+                            <button type="button" id="loadingButton" class="hidden inline-flex items-center justify-center w-full h-full px-[7.292vw] py-[1.157vw] border-[0.289vw] border-black border-solid my-[1.157vw]">
+                                <div class="font-climate text-[3.067vw] text-black leading-[4.803vw] font-normal text-nowrap uppercase" style="font-variation-settings: 'YEAR' 1979">
+                                    <p class="leading-[4.803vw] whitespace-pre">SUBMITTING…</p>
+                                </div>
+                            </button>
+
+                            <div id="formError" class="hidden bg-red-50 border-[0.289vw] border-red-300 text-red-800 p-[1vw] mt-[0.8vw]" role="alert" aria-live="polite"></div>
+                            <div id="formLoading" class="hidden flex items-center gap-2 text-black mt-[0.8vw]" aria-live="polite">
+                                <svg class="animate-[spin_1s_linear_infinite] w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" opacity=".25"/><path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" stroke-width="4"/></svg>
+                                <span class="font-bold">Submitting…</span>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="successMessage" class="success-message bg-primary-green rounded-[2.025vw] p-[1.157vw] hidden leading-[1.6] text-black">
+                        <div class="boom-text font-climate font-normal text-[5.382vw] mb-[0.868vw]" style="font-variation-settings: 'YEAR' 1979">💥 BOOM</div>
+                        <div class="success-title text-[1.852vw] font-bold mb-[0.868vw]">Application submitted!</div>
+                        <p class="success-text text-[1.157vw] leading-[1.4] font-bold  mb-[0.868vw]">Every single person is essential to restoring the right balance.
+                            <br>
+                            Thank you for wanting to learn more or for wanting to be a part of this initiative.
+                            <br>
+                            We will be back to you soon.
+                            <br>
+                            W❤️P
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+            <div id="siteLogo" class="absolute left-[7.002vw] top-[0.3vw] w-[25.521vw] h-[2.257vw]">
+                <img src="./assets/logo-wlp.svg" alt="We Love Pitching" class="w-full h-full" />
+        </div>
+        </section>
+    </div>
+
+    <script>
+        // === CONFIG ===
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwP437T3E9VUVc_jWPHKAxMjws0A3_rnmBiUpmG9X_qJUpX4ePzCgekSkwcfWZP_Sxtow/exec';
+        const FORM_TOKEN = 'WLP_FORM_TOKEN_7c9c1e2a_2025';
+
+        // === DOM REFERENCES ===
+        const formEl = document.getElementById('partnershipForm');
+        const fieldsEl = document.getElementById('formFields');
+        const successEl = document.getElementById('successMessage');
+        const errorEl = document.getElementById('formError');
+        const loadingEl = document.getElementById('formLoading');
+        const submitBtn = formEl.querySelector('button[type="submit"]');
+        const loadingBtn = document.getElementById('loadingButton');
+        const logoInput = document.getElementById('logo');
+        const logoPreview = document.getElementById('logoPreview');
+        const logoThumb = document.getElementById('logoThumb');
+        const removeLogoBtn = document.getElementById('removeLogo');
+        const logoError = document.getElementById('logoError');
+
+        // === FILE VALIDATION ===
+        const MAX_BYTES = 2 * 1024 * 1024;
+        const ALLOWED_MIME = ['image/png','image/jpeg','image/svg+xml'];
+
+        function clearLogo() {
+            logoInput.value = '';
+            const label = document.querySelector('.file-upload-label');
+            if (label) {
+                label.textContent = '📎 Click to upload your logo';
+                label.classList.remove('border-red-500');
+            }
+            logoPreview.classList.add('hidden');
+            logoThumb.src = '';
+            logoError.classList.add('hidden');
+            logoError.textContent = '';
+        }
+
+        // === BASE64 CONVERSION ===
+        function fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    // Prendi solo la parte dopo la virgola (rimuovi "data:image/...;base64,")
+                    const base64 = reader.result.split(',')[1];
+                    resolve(base64);
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // === UI HELPERS ===
+        function setLoading(on) {
+            if (on) {
+                submitBtn.classList.add('hidden');
+                loadingBtn.classList.remove('hidden');
+                submitBtn.disabled = true;
+            } else {
+                submitBtn.classList.remove('hidden');
+                loadingBtn.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        }
+
+        function showError(msg) {
+            if (!msg) return;
+            errorEl.textContent = msg;
+            errorEl.classList.remove('hidden');
+        }
+
+        function hideError() {
+            errorEl.classList.add('hidden');
+            errorEl.textContent = '';
+        }
+
+        function showSuccessUI() {
+            // Nascondi l'intero form
+            formEl.classList.add('hidden');
+            
+            // Nascondi tutti gli elementi nella sezione principale tranne quelli specifici
+            const keep = new Set(['heroBanner','siteLogo','successMessage']);
+            
+            // Nascondi tutti gli elementi nella sezione tranne quelli da mantenere
+            document.querySelectorAll('section *').forEach(el => {
+                if (el.id && keep.has(el.id)) {
+                    // Elemento da mantenere - assicurati che sia visibile
+                    el.classList.remove('hidden');
+                } else if (el.id) {
+                    // Elemento con ID ma non da mantenere - nascondi
+                    el.classList.add('hidden');
+                }
+            });
+            
+            // Mostra success message
+            successEl.classList.remove('hidden');
+            
+            // Scroll al success message
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      
+        const categoryDetails = {
+            ambassadors: {
+                role: "Act as official spokespeople who represent W❤️P publicly and help expand reach and legitimacy.",
+                who: "General ambassadors as global voices and regional or category ambassadors representing creators, agencies, or clients.",
+                position: "External representatives, connected directly to the Core Team, trusted to speak in the name of W❤️P."
+            },
+            allies: {
+                role: "Provide visibility, resources, and influence by aligning their organization with W❤️P values.",
+                who: "Trade associations, major organizations, and big media such as AICP, ACD, Stash, Shots.",
+                position: "Institutional partners that support growth, lobbying, or structure but do not speak for W❤️P."
+            },
+            supporters: {
+                role: "Spread the manifesto, promote the cause, and contribute to cultural change without serving as official representatives.",
+                who: "Individual creators, agencies, clients, smaller organizations, and minor media.",
+                position: "A broad community layer that amplifies the message and grows awareness."
+            }
+        };
+
+        const categoryNames = {
+            ambassadors: "Ambassadors (Representation and Advocacy)",
+            allies: "Allies (Institutional Support)",
+            supporters: "Supporters (Community Advocates)"
+        };
+
+        let selectedCategory = null;
+
+        function selectCategory(category) {
+            // Remove previous selection
+            document.querySelectorAll('.category-card').forEach(card => {
+            card.classList.remove('border-primary-black', 'bg-primary-black', 'text-white');
+            card.classList.add('border-black', 'bg-white', 'text-black');
+            const details = card.querySelector('.category-details');
+            if (details) details.classList.add('hidden');
+          });
+      
+          // Add selection to clicked card
+            const selectedCard = document.querySelector(`#${category}`).parentElement;
+          selectedCard.classList.add('border-primary-black', 'bg-primary-black', 'text-white');
+          selectedCard.classList.remove('border-black', 'bg-white', 'text-black');
+      
+          const details = selectedCard.querySelector('.category-details');
+          if (details) details.classList.remove('hidden');
+            
+            document.querySelector(`#${category}`).checked = true;
+            selectedCategory = category;
+            showFormFields();
+        }
+
+        function showFormFields() {
+            const formFields = document.getElementById('formFields');
+          formFields.classList.remove('hidden');
+          formFields.classList.add('fade-in');
+        }
+      
+        // === FILE UPLOAD HANDLERS ===
+        logoInput.addEventListener('change', async (e) => {
+            const file = e.target.files && e.target.files[0];
+            const label = document.querySelector('.file-upload-label');
+            
+            if (!file) { 
+                clearLogo(); 
+                return; 
+            }
+
+            const type = (file.type || '').toLowerCase();
+            
+            // Nascondi errori precedenti
+            logoError.classList.add('hidden');
+            logoError.textContent = '';
+            if (label) label.classList.remove('border-red-500');
+
+            if (!ALLOWED_MIME.includes(type)) {
+                logoError.textContent = 'Unsupported file type. Allowed: PNG, JPG, SVG.';
+                logoError.classList.remove('hidden');
+                if (label) label.classList.add('border-red-500');
+                logoInput.value = '';
+                logoPreview.classList.add('hidden');
+                logoThumb.src = '';
+                return;
+            }
+            
+            if (file.size > MAX_BYTES) {
+                logoError.textContent = 'Image too large. Max 2MB.';
+                logoError.classList.remove('hidden');
+                if (label) label.classList.add('border-red-500');
+                logoInput.value = '';
+                logoPreview.classList.add('hidden');
+                logoThumb.src = '';
+                return;
+            }
+            
+            // File valido
+            logoThumb.src = URL.createObjectURL(file);
+            logoPreview.classList.remove('hidden');
+            if (label) label.textContent = `📎 ${file.name}`;
+        });
+
+        removeLogoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            clearLogo();
+        });
+      
+        // === SUBMIT HANDLER ===
+        formEl.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideError();
+            
+            if (!selectedCategory) {
+                showError('Please select a category before submitting the form.');
+                return;
+            }
+
+            // Validazione file anche qui (nel caso lo stato sia cambiato)
+            const file = logoInput.files && logoInput.files[0];
+            const label = document.querySelector('.file-upload-label');
+            
+            if (file) {
+                const type = (file.type || '').toLowerCase();
+                
+                if (!ALLOWED_MIME.includes(type)) {
+                    logoError.textContent = 'Unsupported file type. Allowed: PNG, JPG, SVG.';
+                    logoError.classList.remove('hidden');
+                    if (label) label.classList.add('border-red-500');
+                    setLoading(false);
+                    return;
+                }
+                
+                if (file.size > MAX_BYTES) {
+                    logoError.textContent = 'Image too large. Max 2MB.';
+                    logoError.classList.remove('hidden');
+                    if (label) label.classList.add('border-red-500');
+                    setLoading(false);
+                    return;
+                }
+            }
+
+            const fd = new FormData(e.target);
+            fd.set('category', selectedCategory);
+            fd.set('token', FORM_TOKEN);
+
+            // Aggiungi fallback base64 se c'è un file valido
+            if (file) {
+                try {
+                    const b64 = await fileToBase64(file);
+                    fd.set('logo_b64', b64);
+                    fd.set('logo_name', file.name);
+                    fd.set('logo_type', (file.type || '').toLowerCase());
+                } catch (err) {
+                    console.error('Error converting file to base64:', err);
+                    showError('Error processing image file.');
+                    return;
+                }
+            }
+
+            setLoading(true);
+            try {
+                const res = await fetch(APPS_SCRIPT_URL, { method: 'POST', body: fd });
+                const text = await res.text();
+                let json = null;
+                try { json = JSON.parse(text); } catch {}
+
+                console.log('Endpoint raw response:', text);
+
+                if (json && json.ok) {
+                    // Reset form e anteprima
+                    e.target.reset();
+                    clearLogo();
+                    
+                    // Mostra UI di successo
+                    showSuccessUI();
+                } else {
+                    showError((json && json.error) || 'Unexpected response from server.');
+                }
+            } catch (err) {
+                console.error(err);
+                showError('Network error. Please try again.');
+            } finally {
+                setLoading(false);
+            }
+        });
+    </script>
+      
+</body>
+</html>
